@@ -9,6 +9,8 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { TaskFormComponent } from './components/taskview/taskform/taskform.component';
 import { TaskListComponent } from './components/taskview/tasklist/tasklist.component';
 import { TaskViewComponent } from './components/taskview/taskview.component';
+import { EventTimelineComponent } from './components/EventTimeline/eventtimeline.component';
+import { HttpService } from './services/httpservice/http.service';
 
 @NgModule({
     declarations: [
@@ -16,7 +18,8 @@ import { TaskViewComponent } from './components/taskview/taskview.component';
         NavMenuComponent,
         TaskViewComponent,
         TaskFormComponent,
-        TaskListComponent
+        TaskListComponent,
+        EventTimelineComponent,
     ],
     imports: [
         CommonModule,
@@ -25,8 +28,12 @@ import { TaskViewComponent } from './components/taskview/taskview.component';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'task', component: TaskViewComponent },
+            { path: 'timeline', component: EventTimelineComponent },
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers: [
+        HttpService
     ]
 })
 export class AppModuleShared {

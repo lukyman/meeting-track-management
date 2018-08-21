@@ -1,1 +1,93 @@
-﻿<label>working</label>
+﻿<div class="header">
+    <form>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Number of outputs</label>
+                    <input class="form-control" type="number" placeholder="4" />
+                </div>
+            </div>
+
+        </div>
+        <button class="btn btn-info">Generate</button>
+    </form>
+</div>
+
+<div class="row output">
+    <div class="col-md-6">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th>
+                    <label>
+                        <input type="radio" class="checkbox-inline">
+                        Select</label>
+                </th>
+                </tr>
+                <tr>
+                    <th>Start</th>
+                    <th>Title</th>
+                    <th>Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of tasks"><td> 9.30 am</td> <td>{{task.title}}</td> <td>{{task.time}}</td></tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        <label>
+                            <input type="radio" class="checkbox-inline">
+                            Select
+                        </label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Start</th>
+                    <th>Title</th>
+                    <th>Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of tasks"><td> 9.30 am</td> <td>{{task.title}}</td> <td>{{task.time}}</td></tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Start</th>
+                    <th>Title</th>
+                    <th>Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of tasks"><td> 9.30 am</td> <td>{{task.title}}</td> <td>{{task.time}}</td></tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Start</th>
+                    <th>Title</th>
+                    <th>Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of tasks"><td> 9.30 am</td> <td>{{task.title}}</td> <td>{{task.time}}</td></tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

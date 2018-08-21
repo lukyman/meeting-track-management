@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,15 +22,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\EventTimeline\eventtimeline.component.ts" />
     <None Remove="ClientApp\app\components\taskview\taskform\taskform.component.ts" />
     <None Remove="ClientApp\app\components\taskview\tasklist\tasklist.component.ts" />
     <None Remove="ClientApp\app\components\taskview\taskview.component.ts" />
+    <None Remove="ClientApp\app\services\httpservice\http.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\EventTimeline\eventtimeline.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\taskview\taskview.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\taskview\taskform\taskform.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\taskview\tasklist\tasklist.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\services\httpservice\http.service.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

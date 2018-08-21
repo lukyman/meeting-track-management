@@ -1,1 +1,16 @@
-﻿
+﻿table:checked{
+    background-color:red;
+}
+
+.header {
+    position: fixed;
+    display: inline;
+    z-index: 1;
+    background: white;
+    width: 100%;
+}
+
+.output {
+    margin-top: 110px;
+    overflow-y: scroll
+}

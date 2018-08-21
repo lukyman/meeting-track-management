@@ -1,4 +1,4 @@
 ﻿
-<app-taskform></app-taskform>
+<app-taskform (TaskAdded)="onTaskAdded()"></app-taskform>
 
-<app-tasklist></app-tasklist>
+<app-tasklist [tasks]="tasks"></app-tasklist>

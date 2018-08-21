@@ -1,21 +1,19 @@
-﻿<form>
+﻿<form #form="ngForm">
     <div class="row">
-    <div class="col-md-6">
-        <div class="form-group ">
-            <label>Title</label>
-            <input class="form-control" type="text" />
+        <div class="col-md-6">
+            <div class="form-group ">
+                <label>Title</label>
+                <input class="form-control" type="text" [(ngModel)]="Title" name="Title"/>
+            </div>
         </div>
-    </div>
-    <div>
-        <div class="form-group col-md-3">
-            <label>Length in minutes</label>
-            <input class="form-control" type="number" placeholder="eg. 30 min" />
+        <div>
+            <div class="form-group col-md-3">
+                <label>Length in minutes</label>
+                <input class="form-control" type="number" placeholder="eg. 30 min" [(ngModel)]="Minutes" name="Minutes" />
+            </div>
         </div>
+
     </div>
-    
-    <div class="col-md-3">
-        <button type="button" class="btn btn-block">Save</button>
-        <button type="button" class="btn btn-block btn-info">Update</button>
-    </div>
-    </div>
+    <button type="button" *ngIf="!edit" class="btn btn-lg" (click)="addTask(form.value)">Save</button>
+    <button type="button" *ngIf="edit" class="btn btn-lg btn-info" (click)="updateTask(form.value)">Update</button>
 </form>
