@@ -17,7 +17,7 @@ namespace MeetingTrackManagementTest
             var shuffled = ShuffleList.Shuffle<int>(mylist);
             Assert.AreEqual(3, shuffled.Count);
         }
-
+        [TestMethod]
         public void ShuffleTest_ItemChangeIndex_True()
         {
             var mylist = new List<int>();
