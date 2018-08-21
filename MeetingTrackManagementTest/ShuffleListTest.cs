@@ -25,7 +25,7 @@ namespace MeetingTrackManagementTest
             mylist.Add(7);
             mylist.Add(3);
             var shuffled = ShuffleList.Shuffle<int>(mylist);
-            Assert.AreEqual(2, shuffled.IndexOf(7));
+            Assert.AreNotEqual(1, shuffled.IndexOf(7));
         }
     } 
 }
