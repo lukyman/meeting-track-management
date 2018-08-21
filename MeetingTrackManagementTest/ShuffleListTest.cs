@@ -1,5 +1,6 @@
-﻿using System;
+using MeetingTrackManagement.Service;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace MeetingTrackManagementTest
 {
@@ -7,9 +8,24 @@ namespace MeetingTrackManagementTest
     public class ShuffleListTest
     {
         [TestMethod]
-        public void ShuffleTest()
+        public void ShuffleTest_LengthDoesNotChange_True()
         {
-            
+            var mylist = new List<int>();
+            mylist.Add(9);
+            mylist.Add(7);
+            mylist.Add(3);
+            var shuffled = ShuffleList.Shuffle<int>(mylist);
+            Assert.AreEqual(3, shuffled.Count);
         }
-    }
+
+        public void ShuffleTest_ItemChangeIndex_True()
+        {
+            var mylist = new List<int>();
+            mylist.Add(9);
+            mylist.Add(7);
+            mylist.Add(3);
+            var shuffled = ShuffleList.Shuffle<int>(mylist);
+            Assert.AreEqual(2, shuffled.IndexOf(7));
+        }
+    } 
 }
